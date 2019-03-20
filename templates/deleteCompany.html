@@ -1,0 +1,32 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Delete Brand</title>
+
+</head>
+<body>
+    <h1>Delete {{company.name}}</h1>
+    <form class="container" action="{{url_for('deleteCompanies', company_id = company.id)}}" method="POST">
+        <input type="submit" value="Delete">
+    </form>
+    <a href="{{url_for('showCatalog')}}">Cancel</a>
+    
+</body>
+</html> -->
+{%extends 'base.html'%}
+{%block title%} Delete Brand {% endblock title%}
+{%block content%}
+<h1>Delete Brand: {{company.name}}</h1>
+<form action="{{url_for('deleteCompanies', company_id = company.id)}}" method="POST">
+    <input class="btn btn-danger" role="button" type="submit" value="Delete">
+    <br>
+</form>
+<br>
+<a class="btn btn-primary" role="button" href="{{url_for('showCatalog')}}">Cancel</a>
+
+
+
+{%endblock%}

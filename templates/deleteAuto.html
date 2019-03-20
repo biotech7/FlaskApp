@@ -1,0 +1,36 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Delete Auto</title>
+</head>
+<body>
+    <h1>Delete {{car.name}}? </h1>
+    <form action= "{{ url_for('deleteAuto' , company_id = car.company_id , car_id = car.id) }}" method = 'POST'>
+    
+    <input type='submit', value = 'Delete'>
+    
+    </form>
+    
+    <a href= "{{url_for('showAutos', company_id = car.company_id)}}">Cancel</a>
+</body>
+</html> -->
+{%extends 'base.html'%}
+{%block title%} Delete Auto {% endblock title%}
+{%block content%}
+<h1>Delete Auto {{car.name}}? </h1>
+<form action= "{{ url_for('deleteAuto' , company_id = car.company_id , car_id = car.id) }}" method = 'POST'>
+
+<input class="btn btn-danger" role="button" type='submit' value = 'Delete'>
+<br>
+
+</form>
+<br>
+
+<a class="btn btn-primary" role="button" href= "{{url_for('showAutos', company_id = car.company_id)}}">Cancel</a>
+
+
+
+{%endblock%}

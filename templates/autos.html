@@ -1,0 +1,49 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Autos</title>
+</head>
+<body>
+    <h1>{{ company.name }}</h1>
+    <a href='{{url_for("showCatalog")}}'><h2>Back to Companies page</h2></a>
+    <br>
+    <a class="btn btn-primary" href="{{url_for('newAuto', company_id = company_id)}}" role="button">Create Auto</a>
+    <br>
+    {% for auto in autos %}
+    <div>
+        
+        <h2>{{auto.name}}</h2>
+        <p>{{auto.Specifications}}</p>
+        <p>{{auto.price}}</p>
+        <a class="btn btn-primary" href="{{url_for('editAuto', company_id = company_id , car_id = auto.id)}}" role="button">Edit</a>
+        <a class="btn btn-primary" href="{{url_for('deleteAuto', company_id = company_id , car_id = auto.id)}}" role="button">Edit</a>
+        <br><br>
+    </div>
+    {% endfor %}
+</body>
+</html> -->
+
+{%extends 'base.html'%}
+{%block title%} Autos {% endblock title%}
+{%block content%}
+<h1>Brand: {{ company.name }}</h1>
+<a class="btn btn-primary" href='{{url_for("showCatalog")}}' role="button">Back to Companies page</a>
+<br>
+<br>
+<a class="btn btn-primary" href="{{url_for('newAuto', company_id = company_id)}}" role="button">Create Auto</a>
+<br>
+{% for auto in autos %}
+<div>
+    
+    <h2>Name: {{auto.name}}</h2>
+    <p>Specifications: {{auto.Specifications}}</p>
+    <p>Price: {{auto.price}}</p>
+    <a class="btn btn-primary" href="{{url_for('editAuto', company_id = company_id , car_id = auto.id)}}" role="button">Edit</a>
+    <a class="btn btn-primary" href="{{url_for('deleteAuto', company_id = company_id , car_id = auto.id)}}" role="button">Delete</a>
+    <br><br>
+</div>
+{% endfor %}
+{%endblock%}

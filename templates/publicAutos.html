@@ -1,0 +1,42 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Public Autos</title>
+</head>
+<body>
+    <h1>{{company.name}}</h1>
+    <a href="{{url_for('showCatalog')}}"><p>Back to main.</p></a>
+    <br>
+    {%for auto in autos%}
+    <div>
+        
+        <h3>{{auto.name}}</h3>
+        <p>{{auto.Specifications}}</p>
+        <p>{{auto.price}}</p>
+        <br>
+    </div>
+    {%endfor%}
+    
+</body>
+</html> -->
+
+{%extends 'base.html'%}
+{%block title%} Public Autos {% endblock title%}
+{%block content%}
+<a class="btn btn-danger" href='{{url_for("showLogin")}}' role="button">Create your own Brand to Add, Edit and Delete Autos</a>
+<h1>Brand: {{company.name}}</h1>
+<a class="btn btn-primary" href='{{url_for("showCatalog")}}' role="button">Back to Main Page</a>
+<br>
+{%for auto in autos%}
+<div>
+    
+    <h3>Name: {{auto.name}}</h3>
+    <p>Specifications: {{auto.Specifications}}</p>
+    <p>Price: {{auto.price}}</p>
+    <br>
+</div>
+{%endfor%}
+{%endblock%}

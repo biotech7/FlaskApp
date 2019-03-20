@@ -1,0 +1,36 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Brand</title>
+</head>
+<body>
+    <h1>Edit Brand {{editCompany.name}}</h1>
+    <form class="container" action="{{url_for('editCompanies', company_id = company_id)}}" method="POST">
+        <input type="text" size="50" name="name" placeholder="{{editCompany.name}}" required>
+        <br>
+        <input type="submit" value="Edit">
+    </form>
+    <a href="{{url_for('showCatalog')}}"> Cancel</a>
+
+    
+</body>
+</html> -->
+{%extends 'base.html'%}
+{%block title%} Edit Brand {% endblock title%}
+{%block content%}
+
+<h1>Edit Brand: {{editCompany.name}}</h1>
+<form action="{{url_for('editCompanies', company_id = company_id)}}" method="POST">
+    <input type="text" size="50" name="name" placeholder="{{editCompany.name}}">
+    <br>
+    <input class="btn btn-primary" role="button" type="submit" value="Edit">
+    <br>
+</form>
+<br>
+<a class="btn btn-danger" role="button" href="{{url_for('showCatalog')}}"> Cancel</a>
+
+
+{%endblock%}
