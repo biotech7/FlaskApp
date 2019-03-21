@@ -178,8 +178,8 @@ Configurations in Steps
 
 #### References & Credits
 
-[Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps)
-[golgtwins/Udacity-P7-Linux-Server-Configuration](https://libraries.io/github/golgtwins/Udacity-P7-Linux-Server-Configuration)
+[Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps)</br>
+[golgtwins/Udacity-P7-Linux-Server-Configuration](https://libraries.io/github/golgtwins/Udacity-P7-Linux-Server-Configuration)</br>
 [Internal Server Error: Target WSGI script cannot be loaded as Python module AND IOError: [Errno 2] No such file or directory: 'client_secrets.json'
 ](https://stackoverflow.com/questions/31168606/internal-server-error-target-wsgi-script-cannot-be-loaded-as-python-module-and/33223884)
 
